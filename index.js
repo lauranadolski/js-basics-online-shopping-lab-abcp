@@ -50,7 +50,11 @@ else {
 function getTotal () {
     sum = 0;
     for (var n = 0; n < helperarray.length ; n++) {
+<<<<<<< HEAD
     sum += helperarray[n];
+=======
+  sum += helperarray[n];
+>>>>>>> b7e831ac008845241b8c58453cffc332a3b59682
     }
   } 
   
@@ -70,10 +74,20 @@ function total() {
 }
 
 function removeFromCart(item) {
+<<<<<<< HEAD
   var itemArray = [];
   for (var n = 0; n < cart.length ; n ++){
     itemArray = Object.keys(cart[n]);
     if (itemArray[0] === item) {
+=======
+
+var itemArray = [];
+
+  for (var n = 0; n < cart.length ; n ++){
+    itemArray = Object.keys(cart[n]);
+    if (itemArray[0] === item) {
+      
+>>>>>>> b7e831ac008845241b8c58453cffc332a3b59682
       cart.splice(n, 1);
       return cart;
     }
@@ -82,7 +96,9 @@ function removeFromCart(item) {
       return cart;
 }
 
+
 function placeOrder(cardNumber) {
+<<<<<<< HEAD
   if (cardNumber === undefined) {
     console.log ("Sorry, we don't have a credit card on file for you.");
     }
@@ -90,4 +106,15 @@ function placeOrder(cardNumber) {
     console.log ("Your total cost is $" + total() + ", which will be charged to the card " + cardNumber + ".");
     cart.length = 0;
     }
+=======
+
+if (cardNumber === undefined) {
+  console.log ("Sorry, we don't have a credit card on file for you.");
+}
+else {
+  console.log ("Your total cost is " + total() + ", which will be charged to the card " + cardNumber + ".");
+  cart.length = 0;
+  return;
+  }
+>>>>>>> b7e831ac008845241b8c58453cffc332a3b59682
 }
